@@ -34,25 +34,25 @@ export class TilemapCollider extends Component {
 
     createCollider(layer: TiledLayer, x: number, y: number, tileSize: any) {
 
-        const node = new Node(`wall_${x}_${y}`);
-        node.setParent(this.node);
+        // const node = new Node(`wall_${x}_${y}`);
+        // node.setParent(this.node);
 
-        // 👉 tile 转世界坐标
-        const pos = layer.getPositionAt(x, y);
+        // // 👉 tile 转世界坐标
+        // const pos = layer.getPositionAt(x, y);
 
-        // 👉 转世界坐标
-        const worldPos = layer.node.worldPosition.clone();
-        worldPos.x += pos.x;
-        worldPos.y += pos.y;
+        // // 👉 转世界坐标
+        // const worldPos = layer.node.worldPosition.clone();
+        // worldPos.x += pos.x;
+        // worldPos.y += pos.y;
 
 
-        node.setWorldPosition(worldPos);
+        // node.setWorldPosition(worldPos);
 
-        // 👉 设置尺寸
-        const ui = node.addComponent(UITransform);
-        ui.setContentSize(tileSize.width, tileSize.height);
+        // // 👉 设置尺寸
+        // const ui = node.addComponent(UITransform);
+        // ui.setContentSize(tileSize.width, tileSize.height);
 
-        // 👉 添加碰撞体
-        node.addComponent(BoxCollider2D);
+        // // 👉 添加碰撞体
+        // node.addComponent(BoxCollider2D);
     }
 }
